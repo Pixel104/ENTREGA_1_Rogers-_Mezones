@@ -1,0 +1,24 @@
+{% extends 'Buscador/base.html' %}
+
+{% block contenido %}
+
+<form method="get">
+
+    <p>
+        Nombre de Mascota: <input type="text" name="nombre_mascota">
+    </p>
+    <input type="submit" value="Buscar">
+
+</form>
+
+{% if listado_mascotas %}
+
+<ul>
+    {% for mascotas in listado_mascotas %}
+    <li>{{mascotas.nombre_mascota}} {{mascotas.raza}} {{mascotas.color}} {{mascotas.fecha_nacimiento}}</li>
+    {% endfor %}
+</ul>
+
+{% endif %}
+
+{% endblock %}

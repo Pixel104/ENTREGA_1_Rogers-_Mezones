@@ -56,3 +56,16 @@ def  alimento(request):
     formulario = AlimentoFormulario()
 
     return render(request, "Buscador/alimento.html", {"formulario": formulario})
+
+
+def consultas_mascota(request):
+
+    if request.GET:
+        nombre_de_mascota = request.GET.get("nombre_mascota", "")
+        if nombre_de_mascota == "":
+            mascotas = []
+        else:
+            mascotas = Mascota.objects.filter(nombre_mascota__icontains=request.GET.get("nombre_mascota"))
+        return render(request, "Buscador/consultas.html", {"listado_mascotas": mascotas})
+
+    return render(request, "Buscador/consultas.html", {"listado_mascotas": []})
