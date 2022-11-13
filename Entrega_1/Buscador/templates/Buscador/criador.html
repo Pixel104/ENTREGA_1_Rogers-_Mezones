@@ -5,12 +5,13 @@
 
 <h1>REGISTRO DE CRIADORES</h1>
 
-<form method="post">
+<div class="border-start border-5 border-primary ps-5 mb-5"><form method="post">
     {% csrf_token %}
 
     {{ formulario.as_p }}
 
     <input type="submit" value="Registrar Criador">
 </form>
+</div>
 
 {% endblock %}

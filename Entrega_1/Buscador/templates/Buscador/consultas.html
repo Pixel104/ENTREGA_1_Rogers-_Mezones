@@ -2,7 +2,10 @@
 
 {% block contenido %}
 
-<form method="get">
+
+
+<!-- consulta mascota -->
+<div class="border-start border-5 border-primary ps-5 mb-5"> <form method="get">
 
     <p>
         Nombre de Mascota: <input type="text" name="nombre_mascota">
@@ -14,11 +17,33 @@
 {% if listado_mascotas %}
 
 <ul>
+    
     {% for mascotas in listado_mascotas %}
-    <li>{{mascotas.nombre_mascota}} {{mascotas.raza}} {{mascotas.color}} {{mascotas.fecha_nacimiento}}</li>
-    {% endfor %}
+    <table> <table class="table" border="2px solid black">
+        <thead>
+          <tr>
+            <th scope="col" style="color: rgb(0, 128, 0);">Nombre</th>
+            <th scope="col" style="color: green;">Raza</th>
+            <th scope="col" style="color: green;">Color</th>
+            <th scope="col" style="color: green;">Fecha de Nacimiento</th>
+          </tr>
+        </thead>
 </ul>
-
+    
+    <tr>
+        <td>{{mascotas.nombre_mascota}}</td>
+        <td>{{mascotas.raza}}</td>
+        <td>{{mascotas.color}}</td>
+        <td>{{mascotas.fecha_nacimiento}}</td>
+    </tr>
+    
+    </table>
+    {% endfor %}
 {% endif %}
+</div>
+<!-- consulta mascota -->
 
+<div class="border">
+
+</div>
 {% endblock %}
