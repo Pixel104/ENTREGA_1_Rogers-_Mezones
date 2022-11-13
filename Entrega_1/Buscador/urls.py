@@ -2,5 +2,8 @@ from django.urls import path
 from Buscador.views import *
 
 urlpatterns = [
-    path('', mascotas), 
+    path('', inicio, name="buscador-inicio"),
+    path('mascota/', mascotas, name="buscador-mascota"),
+    path('criador/', criador, name="buscador-criador"),
+    path('alimento/', alimento, name="buscador-alimento"), 
 ]

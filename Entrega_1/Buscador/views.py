@@ -5,6 +5,18 @@ from Buscador.models import Mascota, Criador, Alimento
 
 # Create your views here.
 
-def  mascotas(request):
+def  inicio(request):
     
     return render(request, "Buscador/index.html")
+
+def  mascotas(request):
+    
+    return render(request, "Buscador/mascota.html")
+
+def  criador(request):
+    
+    return render(request, "Buscador/criador.html")
+
+def  alimento(request):
+    
+    return render(request, "Buscador/alimento.html")
