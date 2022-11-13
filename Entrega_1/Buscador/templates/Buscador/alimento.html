@@ -3,6 +3,14 @@
 
 {% block contenido %}
 
-<h1>PAGINA DE ALIMENTOS</h1>
+<h1>REGISTRO DE ALIMENTOS PARA MASCOTAS</h1>
+
+<form  method="post">
+    {% csrf_token %}
+
+    {{formulario.as_p}}
+
+    <input type="submit" value="Registrar Alimento">
+</form>
 
 {% endblock %}

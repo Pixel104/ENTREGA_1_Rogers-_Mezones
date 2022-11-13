@@ -5,14 +5,15 @@ from django.db import models
 
 
 class Mascota(models.Model):
-    nombre = models.CharField(max_length=20)
+    nombre_mascota = models.CharField(max_length=20)
     raza = models.CharField(max_length=20)
-    edad = models.IntegerField()
+    color = models.CharField(max_length=20)
     fecha_nacimiento = models.DateField()
 
 class Criador(models.Model):
-    nombre = models.CharField(max_length=30)
-    edad = models.IntegerField()
+    nombre_criador = models.CharField(max_length=30)
+    apellido = models.CharField(max_length=30)
+    provincia = models.CharField(max_length=30)
     fecha_nacimiento = models.DateField()
 
 class Alimento(models.Model):

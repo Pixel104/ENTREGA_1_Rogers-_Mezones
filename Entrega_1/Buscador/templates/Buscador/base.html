@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-    {% load static %}
+{% load static %}
+
     <meta charset="utf-8">
     <title>Buscador de PET SHOP </title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -34,7 +35,7 @@
     <!-- Topbar Start -->
     <div class="container-fluid border-bottom d-none d-lg-block">
         <div class="row gx-0">
-            <div class="col-lg-4 text-center py-2">
+            <div class="col-lg-4 text-center py-0">
                 <div class="d-inline-flex align-items-center">
                     <i class="bi bi-geo-alt fs-1 text-primary me-3"></i>
                     <div class="text-start">
@@ -43,7 +44,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 text-center border-start border-end py-2">
+            <div class="col-lg-4 text-center border-start border-end py-0">
                 <div class="d-inline-flex align-items-center">
                     <i class="bi bi-envelope-open fs-1 text-primary me-3"></i>
                     <div class="text-start">
@@ -52,7 +53,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 text-center py-2">
+            <div class="col-lg-4 text-center py-0">
                 <div class="d-inline-flex align-items-center">
                     <i class="bi bi-phone-vibrate fs-1 text-primary me-3"></i>
                     <div class="text-start">
@@ -75,7 +76,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto py-0">
+            <div class="navbar-nav ms-auto py--3">
                 <a href="{% url 'buscador-inicio' %}" class="nav-item nav-link active">Inicio</a>
                 <a href="{% url 'buscador-mascota' %}" class="nav-item nav-link">Mascotas</a>
                 <a href="{% url 'buscador-criador' %}" class="nav-item nav-link">Cridadores</a>
@@ -88,13 +89,13 @@
 
 
     <!-- Hero Start -->
-    <div class="container-fluid bg-primary py-5 mb-5 hero-header">
-        <div class="container py-5">
+    <div class="container-fluid bg-primary py-3 mb-4 hero-header">
+        <div class="container py-2">
             <div class="row justify-content-start">
                 <div class="col-lg-8 text-center text-lg-start">
                     <h3 class="display-1 text-uppercase text-dark mb-lg-4">Buscador Pet Shop</h3>
                     <h1 class="text-uppercase text-white mb-lg-4">Toda la info para tus mascotas</h1>
-                    <p class="fs-4 text-white mb-lg-4">Puedes buscar y registrart, tus mascotas, dueños o ciradores, alimentos</p>
+                    <p class="fs-4 text-white mb-lg-4">Puedes buscar y registrar, tus mascotas, dueños o ciradores, alimentos</p>
                     <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
                         <a href="" class="btn btn-outline-light border-2 py-md-3 px-md-5 me-5">Read More</a>         
                     </div>

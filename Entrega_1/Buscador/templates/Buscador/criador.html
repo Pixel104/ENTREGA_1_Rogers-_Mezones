@@ -3,6 +3,14 @@
 
 {% block contenido %}
 
-<h1>PAGINA DE CRIADORES</h1>
+<h1>REGISTRO DE CRIADORES</h1>
+
+<form method="post">
+    {% csrf_token %}
+
+    {{ formulario.as_p }}
+
+    <input type="submit" value="Registrar Criador">
+</form>
 
 {% endblock %}
