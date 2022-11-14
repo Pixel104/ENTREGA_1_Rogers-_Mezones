@@ -8,7 +8,7 @@ Proyecto en el cual ponemos en practica:
 # Como usarlo:
 La app lleva por nombre: Buscador.
 
-Desde la pagina de inicio veremos una pequeña introduccion del proyecto
+Desde la pagina de inicio veremos una pequeña introduccion del proyecto.
 
 en la barra de Navegación tenemos:
 
@@ -18,7 +18,6 @@ en la barra de Navegación tenemos:
 
 - Alimentos: podemos registrar alimentos para mascotas, Sabor:(carne, pollo, vegetales, etc), Raza: (pequeñas, grandes, etc), Tamaño: (tamaño del empaque, sea 1/2, 1, 2 o mas kilos).
 
+- Consultas: aca podemos consultar el registro de Mascotas en la DB.
 
-
-podemos buscar a: El Michu,
-                nos mostrara los datos del michu que ya tiene su registro hecho.
+podemos buscar a: El Michu, nos mostrara los datos del michu que ya tiene su registro hecho.

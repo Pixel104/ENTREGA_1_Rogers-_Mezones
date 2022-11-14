@@ -77,7 +77,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py--3">
-                <a href="{% url 'buscador-inicio' %}" class="nav-item nav-link active">Inicio</a>
+                <a href="{% url 'buscador-inicio' %}" class="nav-item nav-link ">Inicio</a>
                 <a href="{% url 'buscador-mascota' %}" class="nav-item nav-link">Mascotas</a>
                 <a href="{% url 'buscador-criador' %}" class="nav-item nav-link">Cridadores</a>
                 <a href="{% url 'buscador-alimento' %}" class="nav-item nav-link">Alimentos</a>  
@@ -135,7 +135,7 @@
     <!-- Footer End -->
     
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 
 </html>
