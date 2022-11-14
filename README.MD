@@ -6,6 +6,7 @@ Proyecto en el cual ponemos en practica:
 - Uso de templates de bootstrap
 
 # Como usarlo:
+La app lleva por nombre: Buscador.
 
 Desde la pagina de inicio veremos una pequeña introduccion del proyecto
 
@@ -19,5 +20,5 @@ en la barra de Navegación tenemos:
 
 
 
-podemos busca a: El Michu
+podemos buscar a: El Michu,
                 nos mostrara los datos del michu que ya tiene su registro hecho.
