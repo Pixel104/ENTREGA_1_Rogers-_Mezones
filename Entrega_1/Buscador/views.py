@@ -1,8 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.template import loader
 from django.http import HttpResponse
 from Buscador.models import Mascota, Criador, Alimento
 from Buscador.forms import CriadorFormulario, MascotaFormulario, AlimentoFormulario
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.forms import   AuthenticationForm, UserCreationForm
 
 # Create your views here.
 
@@ -69,3 +71,35 @@ def consultas_mascota(request):
         return render(request, "Buscador/consultas.html", {"listado_mascotas": mascotas})
 
     return render(request, "Buscador/consultas.html", {"listado_mascotas": []})
+
+
+def log_in(request):
+   
+    errors = ""
+
+    if request.method == "POST":
+        formulario = AuthenticationForm(request, data=request.POST)
+
+        if formulario.is_valid():
+            data = formulario.cleaned_data
+
+            user = authenticate(username=data["username"], password=data["password"])
+
+            if user is not None:
+                login(request, user)
+                return redirect("buscador-inicio")
+            else:
+                return render(request, "AppPixel104/login.html", {"form": formulario, "errors": "Credenciales invalidas"})
+
+        else:
+            return  render(request, "Buscador/login.html", {"form": formulario, "errors": formulario.errors})
+    
+    formulario = AuthenticationForm()
+    return render(request, "Buscador/login.html", {"form": formulario, "errors": errors})
+
+
+def Log_out(request):
+    logout(request)
+    return redirect("buscador-inicio")
+    
+

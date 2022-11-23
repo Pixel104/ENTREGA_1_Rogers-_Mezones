@@ -57,8 +57,8 @@
                 <div class="d-inline-flex align-items-center">
                     <i class="bi bi-phone-vibrate fs-1 text-primary me-3"></i>
                     <div class="text-start">
-                        <h6 class="text-uppercase mb-1">Llamanos</h6>
-                        <span>555 5555-55</span>
+                        <h6 class="text-uppercase mb-1">Bienvenido:</h6>
+                        <span>{{request.user}}</span>
                     </div>
                 </div>
             </div>
@@ -82,6 +82,14 @@
                 <a href="{% url 'buscador-criador' %}" class="nav-item nav-link">Cridadores</a>
                 <a href="{% url 'buscador-alimento' %}" class="nav-item nav-link">Alimentos</a>  
                 <a href="{% url 'buscador-consultas' %}" class="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">CONSULTAS <i class="bi bi-arrow-right"></i></a>
+
+                {% if request.user.is_authenticated %}
+                    <a class="btn btn-primary" href="{% url 'auth-logout' %}">Cerrar Sesion</a>
+                {% else %}
+                    <a class="btn btn-primary" href="{% url 'auth-login' %}">Iniciar Sesion</a>
+                {% endif %}
+                
+                
             </div>
         </div>
     </nav>
